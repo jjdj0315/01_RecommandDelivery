@@ -18,31 +18,26 @@ load_dotenv()
 
 BASE_URL = 'https://www.yogiyo.co.kr/mobile/#/'
 URL = [
-    # 'https://www.yogiyo.co.kr/mobile/#/1367138/'
-    # 'https://www.yogiyo.co.kr/mobile/#/1222170',
-    # 'https://www.yogiyo.co.kr/mobile/#/1023596',
-    # 'https://www.yogiyo.co.kr/mobile/#/1244448',
-    # 'https://www.yogiyo.co.kr/mobile/#/576188',
-    # 'https://www.yogiyo.co.kr/mobile/#/411340/',
-    'https://www.yogiyo.co.kr/mobile/#/1133486/',
-    'https://www.yogiyo.co.kr/mobile/#/1015006/',
-    'https://www.yogiyo.co.kr/mobile/#/1359676/',
-    'https://www.yogiyo.co.kr/mobile/#/8717/',
-    'https://www.yogiyo.co.kr/mobile/#/25883/',
-    'https://www.yogiyo.co.kr/mobile/#/1330885/',
-    'https://www.yogiyo.co.kr/mobile/#/1211895/',
-    'https://www.yogiyo.co.kr/mobile/#/408881/',
-    'https://www.yogiyo.co.kr/mobile/#/60509/',
-    'https://www.yogiyo.co.kr/mobile/#/369084/',
-    'https://www.yogiyo.co.kr/mobile/#/348595/',
-    'https://www.yogiyo.co.kr/mobile/#/469768/',
-    'https://www.yogiyo.co.kr/mobile/#/1078754/',
-    'https://www.yogiyo.co.kr/mobile/#/1096505/',
-    'https://www.yogiyo.co.kr/mobile/#/488332/',
-    'https://www.yogiyo.co.kr/mobile/#/1115530/',
-    'https://www.yogiyo.co.kr/mobile/#/312653/',
-    'https://www.yogiyo.co.kr/mobile/#/1023186/',
-    'https://www.yogiyo.co.kr/mobile/#/1030568/'
+
+    # 'https://www.yogiyo.co.kr/mobile/#/1133486/',
+    # 'https://www.yogiyo.co.kr/mobile/#/1015006/',
+    # 'https://www.yogiyo.co.kr/mobile/#/1359676/',
+    # 'https://www.yogiyo.co.kr/mobile/#/8717/',
+    # 'https://www.yogiyo.co.kr/mobile/#/25883/',
+    # 'https://www.yogiyo.co.kr/mobile/#/1330885/',
+    # 'https://www.yogiyo.co.kr/mobile/#/1211895/',
+    # 'https://www.yogiyo.co.kr/mobile/#/408881/',
+    # 'https://www.yogiyo.co.kr/mobile/#/60509/',
+    # 'https://www.yogiyo.co.kr/mobile/#/369084/',
+    # 'https://www.yogiyo.co.kr/mobile/#/348595/',
+    # 'https://www.yogiyo.co.kr/mobile/#/469768/',
+    # 'https://www.yogiyo.co.kr/mobile/#/1078754/',
+    # 'https://www.yogiyo.co.kr/mobile/#/1096505/',
+    # 'https://www.yogiyo.co.kr/mobile/#/488332/',
+    # 'https://www.yogiyo.co.kr/mobile/#/1115530/',
+    # 'https://www.yogiyo.co.kr/mobile/#/312653/',
+    # 'https://www.yogiyo.co.kr/mobile/#/1023186/',
+    # 'https://www.yogiyo.co.kr/mobile/#/1030568/'
     
     
 ]

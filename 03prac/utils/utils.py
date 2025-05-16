@@ -57,8 +57,6 @@ def extract_keywords(review_text):
     return keywords
 
 
-
-
 def is_valid_menu(menu_name):
     return True if not any(keyword in menu_name for keyword in KEYWORDS_BLACKLIST) else False
 
@@ -73,6 +71,58 @@ def call_openai(prompt, temperature=0.0, model='gpt-4o-2024-08-06'):
 
     return completion.choices[0].message.content
 
+
+# def retrieve_context(query, contexts):
+#     query_embedding = get_embeddings([query], model='text-embedding-3-small')[0]
+#     context_embeddings = get_embeddings(contexts, model='text-embedding-3-small')
+
+#     similarities = [cosine_similarity(query_embedding, context_embedding) for context_embedding in context_embeddings]
+
+#     most_relevant_index = np.argmax(similarities)
+#     print(contexts[most_relevant_index])
+#     return contexts[most_relevant_index]
+
+
+# import numpy as np
+
+# def retrieve_context(query, contexts):
+#     query_embedding = get_embeddings([query], model='text-embedding-3-small')[0]
+#     context_embeddings = get_embeddings(contexts, model='text-embedding-3-small')
+
+#     similarities = [cosine_similarity(query_embedding, context_embedding) for context_embedding in context_embeddings]
+
+#     # Create a list of (similarity, context) tuples
+#     similarity_context_pairs = list(zip(similarities, contexts))
+    
+#     # Sort the pairs in descending order of similarity
+#     sorted_pairs = sorted(similarity_context_pairs, key=lambda x: x[0], reverse=True)
+    
+#     # Extract the sorted contexts
+#     sorted_contexts = [context for _, context in sorted_pairs]
+    
+#     # Print all contexts in order of relevancy
+#     for i, context in enumerate(sorted_contexts, 1):
+#         print(f"{i}. {context}")
+    
+#     return sorted_contexts
+
+
+# def get_topk_reviews(query, contexts, reviews):
+#     query_embedding = get_embeddings([query], model='text-embedding-3-small')[0]
+#     context_embeddings = get_embeddings(contexts, model='text-embedding-3-small')
+
+#     similarities = [cosine_similarity(query_embedding, context_embedding) for context_embedding in context_embeddings]
+
+#     # Get the indices of the sorted array (from highest to lowest)
+#     sorted_indices = np.argsort(similarities)[::-1]
+
+#     # Convert numpy array back to a list (optional)
+#     sorted_indices = sorted_indices.tolist()
+
+#     # Reorder the reviews based on the sorted indices
+#     reranked_reviews = [reviews[i] for i in sorted_indices]
+    
+#     return reranked_reviews
 
 import os
 import time

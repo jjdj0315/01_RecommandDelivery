@@ -1,13 +1,19 @@
 import json
 import os
 import requests
-import sys
-sys.path.insert(0, "..")
 
+from multiprocessing import Process
+import uvicorn
 import gradio as gr
 from openai import OpenAI
 
 from utils.utils import call_openai
+
+
+import gradio as gr
+
+def run_api():
+    uvicorn.run("recommend_api:app", host="0.0.0.0", port=8000, reload=True)
 
 
 SYSTEM_PROMPT = f"""당신의 이름은 '메뉴뚝딱AI'이며 당신의 역할은 배달의민족이라는 음식 주문 모바일 어플에서 리뷰 텍스트 기반으로 메뉴를 추천해주는 것입니다.
@@ -121,6 +127,18 @@ def fn(message, history):
     return output
 
 
+# def run_demo():
+#     demo = gr.ChatInterface(
+#         title='메뉴뚝딱 AI ♾',
+#         fn=fn,
+#         examples=["숙취에 좋은 메뉴 좀 추천해줄레...?"]
+#     )
+#     demo.launch(share=True)
+
+
+# if __name__ == '__main__':
+#     run_demo()
+
 def run_demo():
     demo = gr.ChatInterface(
         title='메뉴뚝딱 AI ♾',
@@ -129,6 +147,6 @@ def run_demo():
     )
     demo.launch(share=True)
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
+    Process(target=run_api).start()
     run_demo()

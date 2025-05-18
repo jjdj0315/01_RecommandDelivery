@@ -1,4 +1,4 @@
-Langchain
+OpenAI
 GPT4
-Pinecone
-Streamlit
+MongoDB
+Gradio
